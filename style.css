@@ -58,6 +58,74 @@ body{
 
     position:relative;
 
+    perspective:2200px;
+    
+    transform-style:preserve-3d;
+
+}
+
+/* 封皮 */
+
+/* ===========================
+   狂熱派正直家 · Cover v0.1
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+body{
+
+    background:#1b1b1b;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    font-family:
+    Baskerville,
+    "Songti TC",
+    "Songti SC",
+    serif;
+
+}
+
+/* 背景 */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,
+    rgba(255,255,255,.03),
+    transparent 70%);
+
+}
+
+/* 整本书 */
+
+.book{
+
+    width:430px;
+
+    height:650px;
+
+    position:relative;
+
     perspective:1800px;
 
 }
@@ -109,6 +177,381 @@ mix-blend-mode:screen;
 
 }
 
+/* 标题 */
+
+h1{
+
+position:absolute;
+
+top:130px;
+
+width:100%;
+
+text-align:center;
+
+font-size:44px;
+
+font-weight:400;
+
+letter-spacing:.35em;
+
+color:#D8D3CC;
+
+opacity:1;
+
+
+}
+
+.subtitle{
+
+position:absolute;
+
+top:205px;
+
+width:100%;
+
+text-align:center;
+
+font-size:14px;
+
+font-weight:400;
+
+letter-spacing:.18em;
+
+color:#828282;
+
+opacity:0;
+
+animation:lineFade 1.4s forwards;
+
+animation-delay:5.5s;
+
+}
+
+/* 三句话 */
+
+.quote{
+
+position:absolute;
+
+top:280px;
+
+width:100%;
+
+text-align:center;
+
+line-height:2.5;
+
+font-size:21px;
+
+color:#CAC5BC;
+
+}
+
+.quote p{
+
+opacity:0;
+
+transform:translateY(10px);
+
+}
+
+.quote p:nth-child(1){
+
+animation:lineFade 1.4s forwards;
+
+animation-delay:1.8s;
+
+}
+
+.quote p:nth-child(2){
+
+animation:lineFade 1.4s forwards;
+
+animation-delay:3s;
+
+}
+
+.quote p:nth-child(3){
+
+animation:lineFade 1.4s forwards;
+
+animation-delay:4.2s;
+
+}
+
+/* OPEN */
+
+.open{
+
+position:absolute;
+
+bottom:80px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+text-decoration:none;
+
+color:#D8D3CC;
+
+letter-spacing:0;
+
+font-size:18px;
+
+opacity:0;
+
+animation:
+
+openFade 1.6s forwards,
+
+breath 3.5s infinite;
+
+animation-delay:7.2s,9s;
+
+transition:.35s;
+
+}
+
+.open:hover{
+
+letter-spacing:.8em;
+
+}
+
+/* 动画 */
+
+@keyframes titleFade{
+
+0%{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes lineFade{
+
+0%{
+
+opacity:0;
+
+transform:translateY(10px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes openFade{
+
+0%{
+
+opacity:0;
+
+}
+
+100%{
+
+opacity:1;
+
+}
+
+}
+
+@keyframes breath{
+
+0%{
+
+opacity:.35;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:.35;
+
+}
+
+}
+
+/* ===========================================
+                FOREWORD
+=========================================== */
+
+.foreword{
+
+    background:#F8F6F1;
+
+    margin:0;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    font-family:
+
+    "Songti TC",
+
+    "Songti SC",
+
+    serif;
+
+}
+
+.paper{
+
+    width:min(760px,90vw);
+
+    min-height:100vh;
+
+    padding:
+
+    160px
+
+    90px
+
+    120px
+
+    90px;
+
+}
+
+
+.paper p{
+
+    font-size:22px;
+
+    line-height:2.4;
+
+    letter-spacing:.04em;
+
+    color:#222;
+
+    margin-bottom:3em;
+
+}
+
+.next{
+
+    display:inline-block;
+
+    margin-top:120px;
+
+    color:#777;
+
+    text-decoration:none;
+
+    letter-spacing:.15em;
+
+    transition:.35s;
+
+}
+
+
+.next:hover{
+
+    color:#111;
+
+    letter-spacing:.35em;
+
+}
+
+
+/* ===========================
+   Skip Animation
+=========================== */
+
+.skip *{
+
+animation-duration:.01s!important;
+
+animation-delay:0s!important;
+
+animation-fill-mode:forwards;
+
+opacity:1!important;
+
+filter:none!important;
+
+}
+
+/* ====================================
+            BOOK FLIP
+==================================== */
+
+body{
+
+    transition:
+    background .45s ease;
+
+}
+
+body.page-flip{
+
+    overflow:hidden;
+
+}
+
+.book-flip{
+
+    animation:bookFlip .65s ease forwards;
+
+    transform-origin:left center;
+
+}
+
+.cover{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#050505;
+
+    border-radius:6px;
+
+    overflow:hidden;
+
+    transform-origin:left center;
+
+    backface-visibility:hidden;
+
+    box-shadow:
+    0 0 80px rgba(0,0,0,.65),
+    0 40px 90px rgba(0,0,0,.75),
+    12px 0 0 rgba(20,20,20,.95);
+
+}
 /* 标题 */
 
 h1{
@@ -330,5 +773,152 @@ opacity:1;
 opacity:.35;
 
 }
+
+}
+
+/* ===========================================
+                FOREWORD
+=========================================== */
+
+.foreword{
+
+    background:#F8F6F1;
+
+    margin:0;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    font-family:
+
+    "Songti TC",
+
+    "Songti SC",
+
+    serif;
+
+}
+
+.paper{
+
+    width:min(760px,90vw);
+
+    min-height:100vh;
+
+    padding:
+
+    160px
+
+    90px
+
+    120px
+
+    90px;
+
+}
+
+
+.paper p{
+
+    font-size:22px;
+
+    line-height:2.4;
+
+    letter-spacing:.04em;
+
+    color:#222;
+
+    margin-bottom:3em;
+
+}
+
+.next{
+
+    display:inline-block;
+
+    margin-top:120px;
+
+    color:#777;
+
+    text-decoration:none;
+
+    letter-spacing:.15em;
+
+    transition:.35s;
+
+}
+
+
+.next:hover{
+
+    color:#111;
+
+    letter-spacing:.35em;
+
+}
+
+
+/* ===========================
+   Skip Animation
+=========================== */
+
+.skip *{
+
+animation-duration:.01s!important;
+
+animation-delay:0s!important;
+
+animation-fill-mode:forwards;
+
+opacity:1!important;
+
+filter:none!important;
+
+}
+
+/* ====================================
+            BOOK FLIP
+==================================== */
+
+body{
+
+    transition:
+    background .45s ease;
+
+}
+/* ===========================
+      BOOK OPEN
+=========================== */
+
+body.page-flip{
+
+    background:#f8f6f1;
+
+}
+
+body.page-flip .cover{
+
+    animation:openBook .85s cubic-bezier(.6,.05,.2,1) forwards;
+
+}
+
+@keyframes openBook{
+
+    0%{
+
+        transform:rotateY(0deg);
+
+    }
+
+    100%{
+
+        transform:rotateY(-170deg);
+
+    }
 
 }
