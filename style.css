@@ -1,5 +1,5 @@
 /* ===========================================
-                FOREWORD
+         Hypnerotomachia Polihpili
 =========================================== */
 
 .foreword{
@@ -99,31 +99,6 @@ filter:none!important;
 
 }
 
-/* ====================================
-            BOOK FLIP
-==================================== */
-
-body{
-
-    transition:
-    background .45s ease;
-
-}
-
-body.page-flip{
-
-    overflow:hidden;
-
-}
-
-.book-flip{
-
-    animation:bookFlip .65s ease forwards;
-
-    transform-origin:left center;
-
-}
-
 .cover{
 
     position:absolute;
@@ -146,7 +121,7 @@ body.page-flip{
     12px 0 0 rgba(20,20,20,.95);
 
 }
-/* 标题 */
+/* 首页标题 */
 
 h1{
 
@@ -370,12 +345,12 @@ opacity:.35;
 
 }
 
-/* ========= TOC ========= */
+/* ========= TOC foreword ========= */
 
 .toc-line{
     margin:80px 0 40px;
     border:none;
-    border-top:1px solid rgba(255,255,255,.15);
+    border-top:1px solid rgba(140, 5, 5, 0.487);
 }
 
 .toc-title{
@@ -388,7 +363,7 @@ opacity:.35;
 
     margin-bottom:35px;
 
-    color:#d7d7d7;
+    color:#483030bc;
 
 }
 
@@ -398,7 +373,7 @@ opacity:.35;
 
     text-decoration:none;
 
-    color:#d7d7d7;
+    color:#945c5c;
 
     margin-bottom:28px;
 
@@ -408,7 +383,7 @@ opacity:.35;
 
 .toc a:hover{
 
-    color:white;
+    color:rgb(116, 0, 0);
 
     transform:translateX(10px);
 
@@ -430,7 +405,7 @@ opacity:.35;
 
     font-size:15px;
 
-    color:#8d8d8d;
+    color:#8b7c7c;
 
     letter-spacing:.08em;
 
@@ -461,7 +436,7 @@ opacity:.35;
 
 .back-link:hover{
 
-    color:white;
+    color:rgb(120, 95, 95);
 
     padding-left:8px;
 
