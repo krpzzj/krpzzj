@@ -1,0 +1,334 @@
+/* ===========================
+   狂熱派正直家 · Cover v0.1
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+body{
+
+    background:#1b1b1b;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    font-family:
+    Baskerville,
+    "Songti TC",
+    "Songti SC",
+    serif;
+
+}
+
+/* 背景 */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,
+    rgba(255,255,255,.03),
+    transparent 70%);
+
+}
+
+/* 整本书 */
+
+.book{
+
+    width:430px;
+
+    height:650px;
+
+    position:relative;
+
+    perspective:1800px;
+
+}
+
+/* 封皮 */
+
+.cover{
+
+    width:100%;
+
+    height:100%;
+
+    background:#050505;
+
+    border-radius:6px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+
+    0 0 80px rgba(0,0,0,.65),
+
+    0 40px 90px rgba(0,0,0,.75),
+
+    12px 0 0 rgba(20,20,20,.95);
+
+}
+
+/* 很轻很轻的纸张颗粒 */
+
+.cover::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+opacity:.05;
+
+background-image:
+radial-gradient(#ffffff 1px,transparent 1px);
+
+background-size:5px 5px;
+
+mix-blend-mode:screen;
+
+}
+
+/* 标题 */
+
+h1{
+
+position:absolute;
+
+top:130px;
+
+width:100%;
+
+text-align:center;
+
+font-size:44px;
+
+font-weight:400;
+
+letter-spacing:.35em;
+
+color:#D8D3CC;
+
+opacity:0;
+
+animation:titleFade 2s forwards;
+
+}
+
+.subtitle{
+
+position:absolute;
+
+top:205px;
+
+width:100%;
+
+text-align:center;
+
+font-size:14px;
+
+font-weight:400;
+
+letter-spacing:.18em;
+
+color:#828282;
+
+opacity:0;
+
+animation:lineFade 1.4s forwards;
+
+animation-delay:5.5s;
+
+}
+
+/* 三句话 */
+
+.quote{
+
+position:absolute;
+
+top:280px;
+
+width:100%;
+
+text-align:center;
+
+line-height:2.5;
+
+font-size:21px;
+
+color:#CAC5BC;
+
+}
+
+.quote p{
+
+opacity:0;
+
+transform:translateY(10px);
+
+}
+
+.quote p:nth-child(1){
+
+animation:lineFade 1.4s forwards;
+
+animation-delay:1.8s;
+
+}
+
+.quote p:nth-child(2){
+
+animation:lineFade 1.4s forwards;
+
+animation-delay:3s;
+
+}
+
+.quote p:nth-child(3){
+
+animation:lineFade 1.4s forwards;
+
+animation-delay:4.2s;
+
+}
+
+/* OPEN */
+
+.open{
+
+position:absolute;
+
+bottom:80px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+text-decoration:none;
+
+color:#D8D3CC;
+
+letter-spacing:0;
+
+font-size:18px;
+
+opacity:0;
+
+animation:
+
+openFade 1.6s forwards,
+
+breath 3.5s infinite;
+
+animation-delay:7.2s,9s;
+
+transition:.35s;
+
+}
+
+.open:hover{
+
+letter-spacing:.8em;
+
+}
+
+/* 动画 */
+
+@keyframes titleFade{
+
+0%{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes lineFade{
+
+0%{
+
+opacity:0;
+
+transform:translateY(10px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes openFade{
+
+0%{
+
+opacity:0;
+
+}
+
+100%{
+
+opacity:1;
+
+}
+
+}
+
+@keyframes breath{
+
+0%{
+
+opacity:.35;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:.35;
+
+}
+
+}
