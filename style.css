@@ -782,7 +782,7 @@ opacity:.35;
 
 .foreword{
 
-    background:#F8F6F1;
+    background:#1B1B1B;
 
     margin:0;
 
@@ -831,7 +831,7 @@ opacity:.35;
 
     letter-spacing:.04em;
 
-    color:#222;
+    color:#CAC5BC;
 
     margin-bottom:3em;
 
@@ -843,7 +843,7 @@ opacity:.35;
 
     margin-top:120px;
 
-    color:#777;
+    color:#D8D3CC;
 
     text-decoration:none;
 
@@ -897,7 +897,7 @@ body{
 
 body.page-flip{
 
-    background:#f8f6f1;
+    background:#1B1B1B;
 
 }
 
