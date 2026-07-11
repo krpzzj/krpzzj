@@ -557,7 +557,7 @@ body:not(.cover-page){
 
 .character img{
 
-    width:min(200px, 80vw);
+    width:min(220px, 80vw);
 
     aspect-ratio:1/1;
 
