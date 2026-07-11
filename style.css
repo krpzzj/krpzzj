@@ -428,6 +428,10 @@ filter:none!important;
         font-size:26px;
 
     }
+    .contents-photo{
+    width:90%;
+    margin:24px auto;
+}
 
 }
 
@@ -552,8 +556,10 @@ body:not(.cover-page){
 }
 
 .character img{
-    width:300px;
-    height:300px;
+
+    width:min(200px, 80vw);
+
+    aspect-ratio:1/1;
 
     object-fit:cover;
 
@@ -566,11 +572,19 @@ body:not(.cover-page){
     margin:0 auto 18px;
 
     box-shadow:0 8px 30px rgba(0,0,0,.18);
+
 }
 
 .character p{
+
     font-size:18px;
+
     letter-spacing:.15em;
+
     color:#8d6b6b;
+
     font-style:italic;
+
+    margin-top:10px;
+
 }
