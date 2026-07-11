@@ -128,7 +128,7 @@ animation:
 
 openFade 1.6s forwards,
 
-breath 3.5s infinite;
+breath 5.5s infinite;
 
 animation-delay:7.2s,9s;
 
@@ -222,10 +222,10 @@ opacity:.35;
 
 }
 /* ===========================================
-                FOREWORD
+                dream
 =========================================== */
 
-.foreword{
+.dream{
 
     background:#F8F6F1;
 
@@ -244,36 +244,7 @@ opacity:.35;
     "Songti TC",
     "Songti SC",
     serif;
-
-}
-
-.paper{
-
-    width:min(92%,760px);
-
-    max-width:760px;
-
-    margin:0 auto;
-
-    min-height:100vh;
-
-    padding:140px 72px 100px;
-
-}
-
-
-.foreword .paper p{
-
-    font-size:22px;
-
-    line-height:2.4;
-
-    letter-spacing:.04em;
-
-    color:#222;
-
-    margin-bottom:3em;
-
+    
 }
 
 .next{
@@ -320,25 +291,7 @@ filter:none!important;
 
 }
 
-.cover{
-
-    position:absolute;
-
-    inset:0;
-
-    background:#050505;
-
-    border-radius:6px;
-    overflow:hidden;
-
-    box-shadow:
-    0 0 80px rgba(0,0,0,.65),
-    0 40px 90px rgba(0,0,0,.75),
-    12px 0 0 rgba(20,20,20,.95);
-
-}
-
-/* ========= TOC foreword ========= */
+/* ========= TOC dream ========= */
 
 .toc-line{
     margin:80px 0 40px;
@@ -358,6 +311,9 @@ filter:none!important;
 
     color:#483030bc;
 
+}
+.contents .toc-title{
+    color:#917d7d;
 }
 
 .toc a{
@@ -434,6 +390,13 @@ filter:none!important;
     transform:translateX(8px);
 
 }
+.contents .back-link{
+    color:#945c5c;
+}
+
+.contents .back-link:hover{
+    color:rgb(116,0,0);
+}
 @media (max-width:768px){
 
     .paper{
@@ -446,7 +409,7 @@ filter:none!important;
 
     }
 
-    .foreword .paper p{
+    .dream .paper p{
 
         font-size:18px;
 
@@ -468,11 +431,6 @@ filter:none!important;
 
 }
 
-.foreword{
-
-animation:pageFade .7s ease;
-
-}
 @keyframes pageFade{
 
 from{
@@ -532,7 +490,7 @@ opacity:1;
         serif;
 
 }
-.foreword .paper p{
+.dream .paper p{
     color:#6a6763;
     font-size:22px;
     line-height:2.4;
@@ -561,11 +519,58 @@ opacity:1;
     line-height: 2.1;
     margin-bottom: 15px;
 }
-body:not(.cover-page){
-    animation: pageFade .7s ease;
-}
 .author-line{
     margin:90px 0 60px;
     border:none;
     border-top:1px solid rgb(88, 50, 50);
+}
+.contents-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 30px 0;
+}
+.paper{
+
+    width:min(92%,760px);
+
+    max-width:760px;
+
+    margin:0 auto;
+
+    min-height:100vh;
+
+    padding:140px 72px 100px;
+
+}
+body:not(.cover-page){
+    animation:pageFade .7s ease;
+}
+.character{
+    text-align:center;
+    margin:50px 0;
+}
+
+.character img{
+    width:300px;
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:3px solid #8d6b6b;
+
+    display:block;
+
+    margin:0 auto 18px;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.18);
+}
+
+.character p{
+    font-size:18px;
+    letter-spacing:.15em;
+    color:#8d6b6b;
+    font-style:italic;
 }
