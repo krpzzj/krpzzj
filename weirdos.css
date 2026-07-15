@@ -1,0 +1,137 @@
+
+.weirdos{
+
+    background:#1c192e;
+
+    margin:0;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    font-family:
+    "Baskerville",
+    "Songti TC",
+    "Songti SC",
+    serif;
+    
+}
+.next{
+
+    display:inline-block;
+
+    margin-top:120px;
+
+    color:#f8fde8;
+
+    text-decoration:none;
+
+    letter-spacing:.15em;
+
+    transition:.35s;
+
+}
+
+.next:hover{
+
+    color:#f8fde8;
+
+    letter-spacing:.35em;
+
+}
+
+.chapter{
+
+    display:block;
+
+    font-size:22px;
+
+    margin-bottom:6px;
+
+}
+
+@media (max-width:768px){
+
+    .paper{
+
+        width:100%;
+
+        max-width:none;
+
+        padding:72px 24px;
+
+    }
+
+    .weirdos .paper p{
+
+        font-size:18px;
+
+        line-height:2;
+
+    }
+
+    .chapter{
+
+        font-size:20px;
+
+    }
+
+    .toc-title{
+
+        font-size:26px;
+
+    }
+    .contents-photo{
+    width:90%;
+    margin:24px auto;
+}
+
+}
+
+@keyframes pageFade{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+.weirdos .paper p{
+    color:#f8fde8;
+    font-size:22px;
+    line-height:2.4;
+    letter-spacing:.04em;
+    margin-bottom:3em;
+}
+.paper{
+
+    width:min(92%,760px);
+
+    max-width:760px;
+
+    margin:0 auto;
+
+    min-height:100vh;
+
+    padding:140px 72px 100px;
+
+}
+body:not(.cover-page){
+    animation:pageFade .7s ease;
+}
+.character{
+    text-align:center;
+    margin:50px 0;
+}

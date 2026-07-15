@@ -1,0 +1,157 @@
+body{
+
+margin:0;
+
+background:#d8d1c5;
+
+display:flex;
+
+justify-content:center;
+
+font-family:
+
+"Baskerville",
+
+"Songti TC",
+
+"Songti SC",
+
+serif;
+
+color:#45413b;
+
+}
+
+.paper{
+
+position:relative;
+
+width:min(92%,760px);
+
+min-height:100vh;
+
+padding:90px 80px;
+
+background:
+
+repeating-linear-gradient(
+
+to bottom,
+
+#f7f3ea 0,
+
+#f7f3ea 39px,
+
+#d9d1c5 40px
+
+);
+
+box-shadow:0 0 25px rgba(0,0,0,.08);
+
+}
+
+.paper::before{
+
+content:"";
+
+position:absolute;
+
+left:62px;
+
+top:0;
+
+bottom:0;
+
+width:1px;
+
+background:rgba(180,80,80,.35);
+
+}
+
+.back{
+
+text-decoration:none;
+
+color:#555;
+
+font-size:18px;
+
+}
+
+.meta{
+
+margin-top:60px;
+
+}
+
+.date{
+
+margin:0;
+
+font-size:30px;
+
+letter-spacing:.05em;
+
+}
+
+.weekday{
+
+margin:8px 0 40px;
+
+font-style:italic;
+
+opacity:.65;
+
+}
+
+h1{
+
+font-size:44px;
+
+margin:0 0 40px;
+
+}
+
+hr{
+
+border:none;
+
+border-top:1px solid rgba(0,0,0,.18);
+
+margin:40px 0;
+
+}
+
+.content{
+
+font-size:22px;
+
+line-height:2.3;
+
+letter-spacing:.04em;
+
+}
+
+.content p{
+
+margin-bottom:2.4em;
+
+}
+
+.bottom{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-top:70px;
+
+}
+
+.bottom a{
+
+text-decoration:none;
+
+color:#555;
+
+}
